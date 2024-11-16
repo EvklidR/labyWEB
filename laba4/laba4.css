@@ -1,0 +1,129 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+/* 1. Вибрирующая кнопка */
+.vibrating-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: vibrate 0.1s infinite;
+  transition: background-color 0.3s;
+}
+
+.vibrating-button:hover {
+  animation: none; /* Остановка вибрации */
+  background-color: #28a745; /* Зеленый цвет */
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  100% { transform: translateX(-2px); }
+}
+
+/* 2. Ссылка с анимацией */
+.important-link {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.important-link::after {
+  content: "";
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.important-link:hover {
+  color: green;
+}
+
+.important-link:hover::after {
+  width: 100%; /* Полоса подчеркивания занимает всю ширину */
+}
+
+/* Мячик с падением */
+.ball-container {
+  position: relative;
+  height: 450px;
+  border: 2px dashed black;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  border-radius: 50%;
+  animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-400px);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+  }
+  10% {
+    transform: translateY(0px) scaleY(0.5);
+  }
+  20% {
+    transform: translateY(-200px) scaleY(1);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+  }
+  30% {
+    transform: translateY(0px) scaleY(0.6);
+    animation-timing-function: cubic-bezier(.2,.64,.42,.83);
+  }
+  40% {
+    transform: translateY(-100px) scaleY(1);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0px) scaleY(0.7);
+    animation-timing-function: cubic-bezier(.2,.64,.42,.83);
+  }
+  60% {
+    transform: translateY(-50px) scaleY(1);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+  }
+  70% {
+    transform: translateY(0px) scaleY(0.7);
+    animation-timing-function: cubic-bezier(.2,.64,.42,.83);
+  }
+  80% {
+    transform: translateY(-25px) scaleY(1);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+  }
+  90% {
+    transform: translateY(0px) scaleY(.8);
+    animation-timing-function: cubic-bezier(.2,.64,.42,.83);
+  }
+  100% {
+    transform: translateY(-10px) scaleY(1);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+  }
+}
+
+
+
+
