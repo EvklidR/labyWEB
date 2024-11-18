@@ -124,6 +124,83 @@ body {
   }
 }
 
+/* Колыбель Ньютона */
+.newton-cradle {
+  position: relative;
+  height: 150px;
+  width: 400px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.newton-ball {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%;
+    bottom: 0;
+}
 
+.string {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    transform-origin: top;
+}
 
+.string::before {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    top: 0;
+}
+
+@keyframes swing4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swing1 {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+.newton-cradle .string:nth-child(1) {
+  animation: swing1 2s ease-in-out infinite;
+}
+
+.newton-cradle .string:nth-child(4) {
+  animation: swing4 2s ease-in-out infinite;
+}
