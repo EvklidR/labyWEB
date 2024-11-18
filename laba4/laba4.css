@@ -19,8 +19,8 @@ body {
 }
 
 .vibrating-button:hover {
-  animation: none; /* Остановка вибрации */
-  background-color: #28a745; /* Зеленый цвет */
+  animation: none;
+  background-color: #28a745;
 }
 
 @keyframes vibrate {
@@ -56,7 +56,7 @@ body {
 }
 
 .important-link:hover::after {
-  width: 100%; /* Полоса подчеркивания занимает всю ширину */
+  width: 100%;
 }
 
 /* Мячик с падением */

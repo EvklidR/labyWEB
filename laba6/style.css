@@ -25,9 +25,6 @@ h1 {
         "block1 block4 block3 block3"
         "block1 block5 block6 block7"
         "block8 block9 block9 block10";
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
 }
 
 article {
